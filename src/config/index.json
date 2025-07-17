@@ -1,0 +1,155 @@
+{
+  "company": {
+    "name": "Bi3 App",
+    "logo": "/assets/images/icon.png"
+  },
+  "navigation": [
+    {
+      "name": "Why us",
+      "href": "why-us"
+    },
+    {
+      "name": "Features",
+      "href": "features"
+    }
+  ],
+  "callToAction": {
+    "text": "Get started",
+    "href": "#"
+  },
+  "mainHero": {
+    "title": "Your Ultimate",
+    "subtitle": "Selling Companion!",
+    "description": "Bye-bye hassle! Welcome to Bi3: the easiest way to sell your used items. Our cutting-edge app connects you with buyers nearby, for a selling experience like never before!",
+    "img": "/assets/images/hero.jpg",
+    "primaryAction": {
+      "text": "Get started",
+      "href": "#"
+    },
+    "secondaryAction": {
+      "text": "Email us",
+      "href": "#"
+    }
+  },
+  "product": {
+    "title": "Why Bi3?",
+    "items": [
+      {
+        "title": "Fast and Smart Selling",
+        "description": "Bi3 takes the stress out of selling your used items. Don’t wait for days or weeks to get a response. Our intelligent platform enables you to receive bids on your `Dash Zone` in real-time. List your item, and watch the bids roll in!",
+        "img": "/assets/images/product1.jpg"
+      },
+      {
+        "title": "Localized Selling with Dash Zone",
+        "description": "When you use Bi3's `Dash Zone`, you tap into a vast network of potential buyers located within a 5-kilometer radius. Connect with your local community, make quick sales, and reduce the need for long-distance transactions.",
+        "img": "/assets/images/product2.jpg"
+      },
+      {
+        "title": "Expanding Your Reach with Selling Zone",
+        "description": "Need to sell an item outside your radius? No worries! Bi3's `Selling Zone` lets you promote your items without limitations, giving you the flexibility to reach buyers from all corners.",
+        "img": "/assets/images/product1.jpg"
+      },
+      {
+        "title": "User-Friendly Interface",
+        "description": "We've designed Bi3 with simplicity in mind. Our user-friendly interface ensures a smooth and intuitive experience, making selling your used items a breeze.",
+        "img": "/assets/images/product2.jpg"
+      },
+      {
+        "title": "Secure Transactions",
+        "description": "At Bi3, your safety and security are our top priorities. We've implemented robust measures to protect your personal information and ensure secure transactions for a worry-free selling experience.",
+        "img": "/assets/images/product1.jpg"
+      }
+    ]
+  },
+  "features": {
+    "title": "Easy & Fast",
+    "subtitle": "How it works",
+    "items": [
+      {
+        "name": "Create Your Listing",
+        "description": "Snap a photo, add a brief description, set a price, and list your item in seconds.",
+        "icon": "/assets/images/react.png"
+      },
+      {
+        "name": "Activate Dash Zone",
+        "description": "For localized selling, activate the `Dash Zone` to connect with buyers within a 5-kilometer radius.",
+        "icon": "/assets/images/tailwindcss.svg"
+      },
+      {
+        "name": "Receive Real-Time Bids",
+        "description": "Watch as potential buyers submit bids on your item, ensuring you get the best offer.",
+        "icon": "/assets/images/nextjs.svg"
+      },
+      {
+        "name": "Seal the Deal",
+        "description": "Choose the most appealing bid, chat with the buyer, and close the deal easily.",
+        "icon": "/assets/images/ts.png"
+      },
+      {
+        "name": "Explore Selling Zone",
+        "description": "Want to sell beyond your local area? Utilize the `Selling Zone` feature to expand your audience.",
+        "icon": "/assets/images/ts.png"
+      },
+      {
+        "name": "Wait, There's No Step 6!",
+        "description": "Surprise! You've already mastered the art of selling with Bi3. No need for a complicated finale – you've sold your item like a pro! Sit back, relax, and enjoy your well-earned success!",
+        "icon": "/assets/images/ts.png"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing",
+    "items": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "priceDetails": "for one user",
+        "features": [
+          "1 user",
+          "Basic Support",
+          "1 GB of storage",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "price": "$15",
+        "priceDetails": "per user",
+
+        "features": [
+          "5 users",
+          "Priority Support",
+          "10 GB of storage",
+          "Phone and Email support"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$29",
+        "priceDetails": "per user",
+        "features": [
+          "50 users",
+          "24/7 Support",
+          "100 GB of storage",
+          "Phone and Email support"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "sections": [
+      {
+        "name": "Why us",
+        "href": "#why-us"
+      },
+      {
+        "name": "Features",
+        "href": "#features"
+      }
+    ],
+    "socialMedia": {
+      "twitter": "https://twitter.com/bi3app",
+      "linkedin": "https://www.linkedin.com/company/bi3app"
+    }
+  }
+}
