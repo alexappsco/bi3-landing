@@ -4,6 +4,7 @@ import About from '../components/About';
 import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
 import Features from '../components/Features';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
@@ -47,6 +48,7 @@ const App = () => {
         </>
       </LazyShow>
       <Analytics />
+      <Footer />
     </div>
   );
 };
