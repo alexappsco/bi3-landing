@@ -4,7 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 
 function useOnScreen(
   ref: MutableRefObject<HTMLDivElement | null>,
-  rootMargin = '0px'
+  rootMargin = '200px'
 ) {
   const [isIntersecting, setIntersecting] = useState(false);
 
@@ -16,6 +16,7 @@ function useOnScreen(
       },
       {
         rootMargin,
+        threshold: 0.1, // Trigger when 10% of the element is visible
       }
     );
     if (ref && ref?.current) {
