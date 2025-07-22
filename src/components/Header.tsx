@@ -15,21 +15,32 @@ const Menu = () => {
   const isHomePage = router.pathname === '/';
 
   const handleExternalNavigation = (href: string) => {
-    // Navigate to home page first, then scroll after a delay
+    // First, navigate to home page
     router.push('/').then(() => {
-      setTimeout(() => {
-        const element = document.getElementById(href);
-        if (element) {
-          // Scroll to a position slightly above the element to trigger animations
-          const elementPosition = element.offsetTop;
-          const offsetPosition = elementPosition - 100; // 100px above the element
+      // Use requestAnimationFrame to ensure DOM is ready
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          const element = document.getElementById(href);
+          if (element) {
+            // Force scroll to top first, then to target
+            window.scrollTo({ top: 0, behavior: 'auto' });
 
-          window.scrollTo({
-            top: Math.max(0, offsetPosition),
-            behavior: 'smooth',
-          });
-        }
-      }, 100); // Small delay to ensure page has loaded
+            // Small delay, then scroll to target
+            setTimeout(() => {
+              const rect = element.getBoundingClientRect();
+              const scrollTop =
+                window.pageYOffset || document.documentElement.scrollTop;
+              const elementTop = rect.top + scrollTop;
+              const targetPosition = Math.max(0, elementTop - 200);
+
+              window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth',
+              });
+            }, 100);
+          }
+        });
+      });
     });
   };
 

@@ -1,12 +1,50 @@
 import React from 'react';
 
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import config from '../config/index.json';
 
 const Footer = () => {
   const { company } = config;
   const { name: companyName, logo } = company;
+  const router = useRouter();
+  const isHomePage = router.pathname === '/';
+
+  const handleSectionNavigation = (href: string) => {
+    if (isHomePage) {
+      // On home page, scroll to the section
+      const element = document.getElementById(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to home page first, then scroll
+      router.push('/').then(() => {
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            const element = document.getElementById(href);
+            if (element) {
+              window.scrollTo({ top: 0, behavior: 'auto' });
+
+              setTimeout(() => {
+                const rect = element.getBoundingClientRect();
+                const scrollTop =
+                  window.pageYOffset || document.documentElement.scrollTop;
+                const elementTop = rect.top + scrollTop;
+                const targetPosition = Math.max(0, elementTop - 200);
+
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: 'smooth',
+                });
+              }, 100);
+            }
+          });
+        });
+      });
+    }
+  };
 
   return (
     <footer className="bg-gray-50">
@@ -30,28 +68,28 @@ const Footer = () => {
                 </h3>
                 <ul className="mt-4 space-y-4">
                   <li>
-                    <a
-                      href="#why-us"
-                      className="text-base text-gray-500 hover:text-gray-900"
+                    <button
+                      onClick={() => handleSectionNavigation('why-us')}
+                      className="text-base text-gray-500 hover:text-gray-900 bg-transparent border-none p-0 cursor-pointer"
                     >
                       Why us
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a
-                      href="#features"
-                      className="text-base text-gray-500 hover:text-gray-900"
+                    <button
+                      onClick={() => handleSectionNavigation('features')}
+                      className="text-base text-gray-500 hover:text-gray-900 bg-transparent border-none p-0 cursor-pointer"
                     >
                       Features
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a
-                      href="#about"
-                      className="text-base text-gray-500 hover:text-gray-900"
+                    <button
+                      onClick={() => handleSectionNavigation('about')}
+                      className="text-base text-gray-500 hover:text-gray-900 bg-transparent border-none p-0 cursor-pointer"
                     >
                       About
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
